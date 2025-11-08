@@ -11,7 +11,7 @@ body {
     color: #333;
     background-color: #ffffff;
     font-size: 16px;
-    overflow: hidden; /* prevent scrolling between sections */
+    overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 .container {
@@ -40,8 +40,8 @@ body {
 }
 
 .profile-photo {
-    width: 280px;    /* keeps current size */
-    height: 350px;   /* keeps current size */
+    width: 280px;    
+    height: 350px;   
     border-radius: 4px;
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -93,17 +93,12 @@ body {
 
 /* --- Sections --- */
 .section-page {
-    height: 100vh;          /* full screen height */
-    overflow-y: auto;       /* scroll inside section if content too long */
-    display: none;          /* hidden by default */
+    display: none;       /* hidden by default */
     padding: 40px 20px;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
 }
 
 .section-page.active {
-    display: block;         /* show active section */
-    opacity: 1;
+    display: block;      /* show active section */
 }
 
 /* Content styles */
@@ -254,20 +249,3 @@ footer {
         padding: 15px;
     }
 }
-
-/* Sections hidden by default */
-.section-page {
-    display: none;
-    height: 100vh;        /* full viewport height */
-    overflow-y: auto;     /* allow vertical scroll inside section */
-    padding: 40px 20px;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
-
-/* Show the active section */
-.section-page.active {
-    display: block;
-    opacity: 1;
-}
-
