@@ -1,49 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dhruv Matade - PhD Scholar in Finance</title>
-<link rel="stylesheet" href="styles.css">
-<meta name="description" content="Dhruv Matade, PhD Scholar at Dublin City University, researching financial decision-making in family firms and capital structure decisions.">
-</head>
-<body>
-<div class="container">
-
-<!-- Header -->
-<header class="main-header">
-    <div class="profile-section">
-        <div class="profile-image">
-            <img src="IMG_0568.jpeg" alt="Dhruv Matade" class="profile-photo">
-        </div>
-        <div class="profile-content">
-            <h1>Dhruv Matade</h1>
-            <h2 class="title">PhD Scholar in Finance and Family Business</h2>
-            <h3 class="affiliation">Dublin City University</h3>
-            <nav class="inline-nav">
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#papers">Research Interest</a>
-                <a href="#chess-highlight">Chess</a>
-                <a href="#currently-reading">Current Reading</a>
-                <a href="#education">Education</a>
-                <a href="#personal-views">Interests</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </div>
-</header>
-
-<!-- Sections -->
 <main class="content-area">
 
-<section id="about" class="section-page">
+<!-- About / Home Section -->
+<section id="about" class="section-page active">
 <h2>About</h2>
 <p>I am a PhD Scholar at Dublin City University specializing in Finance and Family Business research. My research focuses on financial decision-making in family firms, particularly examining how varying levels of family ownership influence capital structure decisions. I explore the critical role of institutional quality in shaping financing choices between debt and equity options.</p>
 <p>My work also investigates how family firms contribute to democratic processes and examines the distinctive behavioral patterns of family businesses in the Global South, where economic and institutional contexts create unique challenges and opportunities.</p>
 <p>Beyond academia, I maintain interests in chess, cricket, geopolitics, and cinema, which provide diverse perspectives that enrich my analytical approach to business and finance research.</p>
+
+<!-- Optional Home Preview of Current Reading -->
+<div class="reading-preview">
+<h3>Currently Reading 📖</h3>
+<p>Money & Generations: A Guide for Enterprising Families and Their Advisors – Anneleen Michiels & Claudia Binz Astrachan</p>
+</div>
 </section>
 
+<!-- Education -->
 <section id="education" class="section-page">
 <h2>Education</h2>
 <div class="education-item">
@@ -71,8 +42,9 @@
 </ul>
 </div>
 </section>
-    
-    <section id="research" class="section-page">
+
+<!-- Research Interest -->
+<section id="research" class="section-page">
 <h2>Research Interests</h2>
 <ul>
 <li>Financial decision-making in family firms</li>
@@ -83,27 +55,7 @@
 </ul>
 </section>
 
-<section id="papers" class="section-page">
-<h2>Research Interest</h2>
-<div class="blog-post">
-<h3>Family Firms in Emerging Markets: A Different Paradigm</h3>
-<p>One of the most fascinating aspects of my research is how family firms in the Global South operate under fundamentally different institutional constraints compared to their Western counterparts...</p>
-</div>
-<div class="blog-post">
-<h3>The Democracy-Family Business Nexus</h3>
-<p>An intriguing question that emerged during my literature review: How do family businesses contribute to democratic stability? Initial evidence suggests that family firms, with their long-term orientation and community embeddedness, may serve as important stabilizing forces in developing democracies...</p>
-</div>
-</section>
-
-<section id="chess-highlight" class="section-page">
-<h2>♟️ Chess Achievements</h2>
-<div class="chess-images">
-<img src="Chess 1.jpg" alt="DCU Chess Match 1" class="chess-image">
-<img src="Chess 2.jpg" alt="DCU Chess Match 2" class="chess-image">
-</div>
-<p>Had the honour of representing <strong>Dublin City University</strong> in the Leinster League, where both my team and I executed victories.</p>
-</section>
-
+<!-- Full Current Reading -->
 <section id="currently-reading" class="section-page">
 <h2>Current Reading</h2>
 <div class="reading-item">
@@ -111,8 +63,30 @@
 </div>
 </section>
 
+<!-- Papers -->
+<section id="papers" class="section-page">
+<h2>Research Papers</h2>
+<div class="blog-post">
+<h3>Family Firms in Emerging Markets: A Different Paradigm</h3>
+<p>One of the most fascinating aspects of my research is how family firms in the Global South operate under fundamentally different institutional constraints...</p>
+</div>
+<div class="blog-post">
+<h3>The Democracy-Family Business Nexus</h3>
+<p>An intriguing question that emerged during my literature review: How do family businesses contribute to democratic stability? Initial evidence suggests that family firms may serve as stabilizing forces in developing democracies...</p>
+</div>
+</section>
 
+<!-- Chess -->
+<section id="chess-highlight" class="section-page">
+<h2>♟️ Chess Achievements</h2>
+<div class="chess-images">
+<img src="Chess 1.jpg" alt="DCU Chess Match 1" class="chess-image">
+<img src="Chess 2.jpg" alt="DCU Chess Match 2" class="chess-image">
+</div>
+<p>Had the honour of representing <strong>Dublin City University</strong> in the Leinster League...</p>
+</section>
 
+<!-- Personal Views & Interests -->
 <section id="personal-views" class="section-page">
 <h2>Personal Views & Interests</h2>
 <div class="interest-section">
@@ -133,6 +107,7 @@
 </div>
 </section>
 
+<!-- Contact -->
 <section id="contact" class="section-page">
 <h2>Contact</h2>
 <p><strong>Email:</strong> dhruv.matade2@mail.dcu.ie</p>
@@ -140,36 +115,3 @@
 </section>
 
 </main>
-
-<footer>
-<p>&copy; 2025 Dhruv Matade. All rights reserved.</p>
-</footer>
-
-</div>
-
-<!-- Section Switching Script -->
-<script>
-const navLinks = document.querySelectorAll('.inline-nav a');
-const sections = document.querySelectorAll('.section-page');
-
-function showSection(id) {
-    sections.forEach(sec => sec.classList.remove('active'));
-    const section = document.getElementById(id);
-    if (section) section.classList.add('active');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSection('about'); // default section
-});
-
-navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        showSection(targetId);
-    });
-});
-</script>
-
-</body>
-</html>
