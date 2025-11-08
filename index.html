@@ -1,14 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dhruv Matade - PhD Scholar in Finance</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="description" content="Dhruv Matade, PhD Scholar at Dublin City University, researching family firm definitions, evolution, and financial decision-making.">
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<header class="main-header">
+    <div class="profile-section">
+        <div class="profile-image">
+            <img src="IMG_0568.jpeg" alt="Dhruv Matade" class="profile-photo">
+        </div>
+        <div class="profile-content">
+            <h1>Dhruv Matade</h1>
+            <h2 class="title">PhD Scholar in Finance and Family Business</h2>
+            <h3 class="affiliation">Dublin City University</h3>
+            <nav class="inline-nav">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#research">Research</a>
+                <a href="#currently-reading">Current Reading</a>
+                <a href="#papers">Research Interest</a>
+                <a href="#chess-highlight">Chess</a>
+                <a href="#personal-views">Interests</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Sections -->
 <main class="content-area">
 
-<!-- About / Home Section -->
+<!-- About / Home -->
 <section id="about" class="section-page active">
 <h2>About</h2>
 <p>I am a PhD Scholar at Dublin City University specializing in Finance and Family Business research. My work examines the definitions of family firms and their evolution across different economic and institutional contexts. I study how family ownership structures influence decision-making and the long-term development of these firms.</p>
 <p>My research also explores the role of institutional quality, governance practices, and socio-economic factors in shaping the strategies and growth of family businesses, particularly in emerging markets.</p>
 <p>Beyond academia, I maintain interests in chess, cricket, geopolitics, and cinema, which provide diverse perspectives that enrich my analytical approach to business and finance research.</p>
 
-
-<!-- Optional Home Preview of Current Reading -->
+<!-- Home preview of Current Reading -->
 <div class="reading-preview">
 <h3>Currently Reading 📖</h3>
 <p>Money & Generations: A Guide for Enterprising Families and Their Advisors – Anneleen Michiels & Claudia Binz Astrachan</p>
@@ -44,7 +80,7 @@
 </div>
 </section>
 
-<!-- Research Interest -->
+<!-- Research Interests -->
 <section id="research" class="section-page">
 <h2>Research Interests</h2>
 <ul>
@@ -56,7 +92,7 @@
 </ul>
 </section>
 
-<!-- Full Current Reading -->
+<!-- Current Reading -->
 <section id="currently-reading" class="section-page">
 <h2>Current Reading</h2>
 <div class="reading-item">
@@ -64,12 +100,12 @@
 </div>
 </section>
 
-<!-- Papers -->
+<!-- Research Papers -->
 <section id="papers" class="section-page">
 <h2>Research Papers</h2>
 <div class="blog-post">
 <h3>Family Firms in Emerging Markets: A Different Paradigm</h3>
-<p>One of the most fascinating aspects of my research is how family firms in the Global South operate under fundamentally different institutional constraints...</p>
+<p>One of the most fascinating aspects of my research is how family firms in the Global South operate under fundamentally different institutional constraints compared to their Western counterparts...</p>
 </div>
 <div class="blog-post">
 <h3>The Democracy-Family Business Nexus</h3>
@@ -116,3 +152,38 @@
 </section>
 
 </main>
+
+<footer>
+<p>&copy; 2025 Dhruv Matade. All rights reserved.</p>
+</footer>
+
+</div>
+
+<!-- Section Switching Script -->
+<script>
+const navLinks = document.querySelectorAll('.inline-nav a');
+const sections = document.querySelectorAll('.section-page');
+
+function showSection(id) {
+    sections.forEach(sec => sec.classList.remove('active'));
+    const section = document.getElementById(id);
+    if (section) section.classList.add('active');
+}
+
+// Show default section on page load
+document.addEventListener('DOMContentLoaded', () => {
+    showSection('about');
+});
+
+// Navigation click handler
+navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        showSection(targetId);
+    });
+});
+</script>
+
+</body>
+</html>
