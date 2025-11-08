@@ -254,3 +254,20 @@ footer {
         padding: 15px;
     }
 }
+
+/* Sections hidden by default */
+.section-page {
+    display: none;
+    height: 100vh;        /* full viewport height */
+    overflow-y: auto;     /* allow vertical scroll inside section */
+    padding: 40px 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Show the active section */
+.section-page.active {
+    display: block;
+    opacity: 1;
+}
+
